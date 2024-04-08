@@ -18,9 +18,15 @@ The ball can only be seen if the height of the rebounding ball is strictly great
 
 '''
 def bouncing_ball(h, bounce, window):
-    if h>0:
-        if (bounce>0 and bounce<1):
-            if window>h:
-
- ##testing git
-bouncing_ball()
+    count =0
+    if (h>0 and bounce>0 and bounce<1 and h>window):
+        count+=1
+        while(h>window):
+            h*=bounce
+            if(h>window):
+                count+=2
+                
+        return(count)    
+    else:
+        return -1
+bouncing_ball(3, 0.66, 1.5)
