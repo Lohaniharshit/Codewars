@@ -1,5 +1,5 @@
 a=5,6,9,8
-print(type(a))
+print(a)
 # b=6
 # print(a)
 # print(b)
