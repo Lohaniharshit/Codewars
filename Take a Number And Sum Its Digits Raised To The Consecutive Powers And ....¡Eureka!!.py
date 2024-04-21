@@ -20,7 +20,13 @@ If there are no numbers of this kind in the range
 Enjoy it!!
 '''
 #
-def sum_dig_pow(a, b): # range(a, b + 1) will be studied by the function
-    for i in range(a,b+1):
-        a=a.append[i]
-    return []
+def sum_dig_pow(a, b):
+    eureka_numbers = []
+    for num in range(a, b + 1):
+        sum_dig_pow = 0
+        digits = str(num)
+        for i in range(len(digits)):
+            sum_dig_pow += int(digits[i]) ** (i + 1)
+        if sum_dig_pow == num:
+            eureka_numbers.append(num)
+    return eureka_numbers
